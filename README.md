@@ -10,7 +10,7 @@ First, download and install the project's dependencies:
 
 ```sh
     git clone https://github.com/kevinEliezer/TheCRMService
-    npm i
+    cd TheCRMService && npm i
 ```
 
 Once installed, you can start messing around! Here are some scripts which will be helpful to you:
