@@ -29,6 +29,7 @@
   "homepage": "https://github.com/kevinEliezer/TheCRMService#readme",
   "dependencies": {
     "helmet": "^4.6.0",
+    "log4js": "^6.3.0",
     "mongoose": "^6.0.0"
   },
   "devDependencies": {
