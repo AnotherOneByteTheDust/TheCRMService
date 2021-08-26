@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const { merge } = require('webpack-merge')
 const nodeExternals = require('webpack-node-externals')
@@ -6,6 +5,11 @@ const path = require('path')
 const webpack = require('webpack')
 const dotenv = require('dotenv').config({ path: path.join(__dirname, '../env/.env') })
 const common = require('./webpack.common.js')
+
+if (!dotenv) {
+  console.log('[INFO] Create a env/.env file before building.')
+  process.exit(1)
+}
 
 module.exports = merge(common, {
   output: {

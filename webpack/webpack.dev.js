@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 const NodemonPlugin = require('nodemon-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const { merge } = require('webpack-merge')

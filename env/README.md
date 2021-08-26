@@ -14,9 +14,11 @@ NODE_ENV="development" | "production"
 
 SERVER_PORT=3000
 
+LOGGER_LEVEL="off" | "fatal" | "error" | "warn" | "info" | "debug" | "trace" | "all"
+
 MONGO_USER="thecrmservice"
 MONGO_PASS="thecrmservice"
 MONGO_HOST="localhost"
-MONGO_PORT="23032"
+MONGO_PORT="27019"
 MONGO_DB="the-crm-service"
 ```
