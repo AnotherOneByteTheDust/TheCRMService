@@ -6,8 +6,8 @@ const webpack = require('webpack')
 const dotenv = require('dotenv').config({ path: path.join(__dirname, '../env/.env') })
 const common = require('./webpack.common.js')
 
-if (!dotenv) {
-  console.log('[INFO] Create a env/.env file before building.')
+if (!dotenv.path) {
+  console.log('[\x1b[31mERROR\x1b[37m] .env file does not exist in env folder.')
   process.exit(1)
 }
 
