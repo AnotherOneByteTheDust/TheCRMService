@@ -15,6 +15,9 @@
         "@logger": [
           "src/common/logger"
         ],
+        "@infrastructure/*": [
+          "src/infrastructure/*"
+        ]
       }
     },
     "include": [

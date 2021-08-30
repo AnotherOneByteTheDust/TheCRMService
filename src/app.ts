@@ -1,12 +1,20 @@
-import { runServer, stopServer } from './infraestructure/server'
+import { runServer, stopServer } from '@infrastructure/server'
+import { runOrm, stopOrm } from '@infrastructure/orm'
 import { checkStartup } from './preset'
+import { appLogger } from '@logger'
 
-const startApplication = () => {
-  runServer()
+const startApplication = async () => {
+  try {
+    await runOrm()
+    runServer()
+  } catch ({ message }) {
+    appLogger('error', 'Application starting error')
+  }
 }
 
-const closeApplication = () => {
+const closeApplication = async () => {
   stopServer()
+  await stopOrm()
 }
 
 checkStartup()
