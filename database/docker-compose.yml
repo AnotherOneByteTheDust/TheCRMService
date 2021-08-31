@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  thecrmdatabase:
+    image: mongo:latest
+    container_name: ${CONTAINER_NAME}
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${ROOT_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${ROOT_PASSWORD}
+      MONGO_INITDB_DATABASE: ${ROOT_DATABASE}
+    ports:
+      - ${EXTERNAL_PORT}:${INTERNAL_PORT}
+    volumes:
+      - ${CONFIGURATION_PATH}/createdatabase.js:/docker-entrypoint-initdb.d/createdatabase.js:ro

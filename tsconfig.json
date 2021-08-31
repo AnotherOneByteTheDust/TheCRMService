@@ -1,0 +1,29 @@
+{
+    "compilerOptions": {
+      "target": "es5",
+      "module": "commonjs",
+      "strict": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true,
+      "noImplicitAny": true,
+      "outDir": "dist",
+      "resolveJsonModule": true,
+      "sourceMap": true,
+      "baseUrl": ".",
+      "paths": {
+        "@logger": [
+          "src/common/logger"
+        ],
+        "@infrastructure/*": [
+          "src/infrastructure/*"
+        ]
+      }
+    },
+    "include": [
+      "src/**/*"
+    ],
+    "exclude": [
+      "node_modules"
+    ]
+}
