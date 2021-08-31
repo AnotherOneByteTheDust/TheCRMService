@@ -4,7 +4,7 @@
   "description": "REST API for an awesome CRM Service",
   "main": "index.js",
   "scripts": {
-    "start": "npm run build:prod && node dist/thecrmservice-prod.js",
+    "start": "npm run db:up && npm run build:prod && node dist/thecrmservice-prod.js",
     "clean": "rm -rf node_modules dist",
     "lint": "npx eslint .",
     "lint:fix": "npx eslint --fix",

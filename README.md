@@ -21,9 +21,24 @@ Once installed, you can start messing around! Here are some scripts which will b
 -   `lint:fix`: detects code format errors and fixes them.
 -   `build:dev`: builds and executes the project with a watcher for development purposes.
 -   `build:prod`: builds the project for production.
+-   `db:up`: starts a database for development purposes.
+-   `db:down`: stops the database.
 
 To run any of them, just:
 
 ```sh
     npm run <script_name>
 ```
+
+## :wrench:	Tools
+
+This project was built using the following tools and frameworks:
+
+-   `typescript`: JavaScript with types.
+-   `webpack`: project bundling.
+-   `express.js`: API development.
+-   `mongoose`: Object Data Modeling library for MongoDB.
+-   `log4js`: console logging.
+-   `jest`: unit testing.
+-   `supertest`: E2E testing.
+-   `docker`: project  containerization.
