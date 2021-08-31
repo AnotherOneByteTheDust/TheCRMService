@@ -1,10 +1,9 @@
-import * as mongodb from 'mongoose'
-import { MONGO_URI, MONGO_OPTIONS } from './mongoose/core'
+import { mongoose, MONGO_URI } from './mongoose/core'
 
 export const runOrm = async () => {
-  await mongodb.connect(MONGO_URI, MONGO_OPTIONS)
+  await mongoose.connect(MONGO_URI)
 }
 
 export const stopOrm = async () => {
-  await mongodb.disconnect()
+  await mongoose.disconnect()
 }

@@ -11,8 +11,4 @@ services:
     ports:
       - ${EXTERNAL_PORT}:${INTERNAL_PORT}
     volumes:
-      - data_volume:/data/db
-
-volumes:
-  data_volume:
-    name: ${VOLUME_NAME}
+      - ${CONFIGURATION_PATH}/createdatabase.js:/docker-entrypoint-initdb.d/createdatabase.js:ro

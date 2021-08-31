@@ -8,7 +8,7 @@ const startApplication = async () => {
     await runOrm()
     runServer()
   } catch ({ message }) {
-    appLogger('error', 'Application starting error')
+    appLogger('error', `Application starting error. ${message}`)
   }
 }
 
