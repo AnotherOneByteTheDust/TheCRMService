@@ -3,7 +3,7 @@ import express from 'express'
 import helmet from 'helmet'
 import { urlencoded, json } from 'body-parser'
 import { serverLogger } from '@logger'
-import { signupRoutes } from './routes'
+import { customerRoutes, signupRoutes } from './routes'
 
 const app = express()
 const port = parseInt(process.env.SERVER_PORT ?? '3000', 10)
@@ -13,6 +13,7 @@ app.use(helmet())
 app.use(urlencoded({ extended: true }))
 
 app.use(signupRoutes)
+app.use(customerRoutes)
 
 const server = createServer(app)
 

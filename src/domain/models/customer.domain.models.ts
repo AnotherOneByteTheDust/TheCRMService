@@ -1,8 +1,12 @@
-export interface BasicCustomerDomainModel {
+export interface CustomerDomainModel {
   id: string
   name: string
   surname: string
-  photo: string
+  avatarUrl: string
   createdBy: string
-  lastModifiedBy: string
+  lastModificationBy: string
+  createdAt: string
+  updatedAt: string
 }
+
+export type NewCustomerDomainModel = Pick<CustomerDomainModel, 'name' | 'surname' | 'avatarUrl'>

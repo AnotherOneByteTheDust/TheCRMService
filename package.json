@@ -10,7 +10,7 @@
     "lint:fix": "npx eslint --fix",
     "build:dev": "webpack --config ./webpack/webpack.dev.js",
     "build:prod": "webpack --config ./webpack/webpack.prod.js",
-    "db:up": "docker-compose -f database/docker-compose.yml up",
+    "db:up": "docker-compose -f database/docker-compose.yml up -d",
     "db:stop": "docker stop thecrmservice_database",
     "test": "jest"
   },
