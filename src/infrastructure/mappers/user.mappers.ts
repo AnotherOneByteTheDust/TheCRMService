@@ -1,8 +1,7 @@
 import { NewUserInputDto, UserDto } from '../dtos'
 import { NewUserDomainModel, UserDomainModel } from '../../domain/models'
 
-export const mapUserFromDtoToDomainModel = (user: UserDto | null): UserDomainModel | null => {
-  if (!user) { return user }
+export const mapUserFromDtoToDomainModel = (user: UserDto): UserDomainModel | null => {
   const { _id, ...otherUserfields } = user
 
   return {
