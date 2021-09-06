@@ -1,12 +1,13 @@
 export interface UserDomainModel {
   id: string
-  username: string
   password: string
+  email: string
+  username: string
+  token: string | null
   isAdmin: boolean
-  isCoreAdmin: boolean
-  token: string
+  lastLoginAt: string | null
+  createdAt: string
+  updatedAt: string
 }
 
-export type NewUserDomainModel = Pick<UserDomainModel, 'username' | 'password' | 'isAdmin' >
-export type UpdateUserDomainModel = Pick<UserDomainModel, 'username' | 'password' | 'isAdmin'>
-export type AuthenticatedUserDomainModel = Pick<UserDomainModel, 'token'>
+export type NewUserDomainModel = Pick<UserDomainModel, 'email' | 'username' | 'password'>
